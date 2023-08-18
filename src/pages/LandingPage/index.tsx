@@ -1,8 +1,6 @@
-import React from 'react';
-import './styles.scss';
+import React from "react";
+import "./styles.scss";
 
 export default function LandingPage() {
-  return (
-    <div>Landing page</div>
-  )
+  return <div>Landing page</div>;
 }

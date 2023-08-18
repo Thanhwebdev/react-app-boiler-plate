@@ -20,9 +20,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettify": "prettier --write .",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx . --ignore-pattern './node_modules/' --ignore-pattern './buid/'",
+    "precommit": "npm run prettify && npm run lint:fix",
+    "build": "npm run precommit && export CI=false && GENERATE_SOURCEMAP=false react-scripts build",
+    "winBuild": "npm run precommit && set export CI=false && set \"GENERATE_SOURCEMAP=false\" && react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +45,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.0.0"
   }
 }
