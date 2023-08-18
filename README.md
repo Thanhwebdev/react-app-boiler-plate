@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+### `Instructions`
+
+1. Update project name inside package.json
+2. Update title tag inside public/index.html
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
