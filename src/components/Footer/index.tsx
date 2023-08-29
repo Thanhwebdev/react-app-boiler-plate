@@ -2,5 +2,5 @@ import React from "react";
 import "./styles.scss";
 
 export default function Footer() {
-  return <div>Footer component</div>;
+  return <footer>Footer component</footer>;
 }

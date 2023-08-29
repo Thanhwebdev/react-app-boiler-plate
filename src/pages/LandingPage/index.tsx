@@ -24,8 +24,8 @@ export default function LandingPage() {
   }, []);
 
   return <>
-    <div>{intro}</div>
-    <div>
+    <section>{intro}</section>
+    <section>
       <ul>
         {
           mockData.map((e:any) => 
@@ -36,6 +36,6 @@ export default function LandingPage() {
           )
         }
       </ul>
-    </div>
+    </section>
   </>;
 }
