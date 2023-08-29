@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# React TypeScript boilerplate
+
+A simple, lightweight React TypeScript boilerplate that provides the minimal requirements to start developing a web application.
 
 ### `Instructions`
 
