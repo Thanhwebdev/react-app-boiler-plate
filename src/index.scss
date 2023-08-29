@@ -12,5 +12,18 @@ code {
     monospace;
 }
 
-
 // global styles goes here
+.fixed-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}

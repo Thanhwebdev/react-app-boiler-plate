@@ -1,0 +1,20 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+
+  .company-logo {
+    height: 50px;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline;
+
+      a {
+        margin-right: .6rem;
+      }
+    }
+  }
+}

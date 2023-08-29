@@ -6,5 +6,5 @@ export default function Footer() {
   const startYear = 2022;
   const date = new Date();
 
-  return <footer>&copy; {startYear} - {date.getFullYear()} All Rights Reserved</footer>;
+  return <footer className="center">&copy; {startYear} - {date.getFullYear()} All Rights Reserved</footer>;
 }

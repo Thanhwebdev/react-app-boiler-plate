@@ -7,9 +7,9 @@ export default function LandingPage() {
   const [intro, setIntro] = useState<string>('');
   const [mockData, setMockData] = useState<any[]>([]);
 
+  // fetch mock data from service
   const fetchMockData = async () => {
     const mockData =  await getMockData()
-    console.log(mockData)
     setMockData(mockData)
   }
 
@@ -20,11 +20,12 @@ export default function LandingPage() {
 
     // get mock data
     fetchMockData()
-
   }, []);
 
   return <>
-    <section>{intro}</section>
+    <section className="center">
+      <div className="banner">{intro}</div>  
+    </section>
     <section>
       <ul>
         {

@@ -5,28 +5,58 @@ import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import LandingPage from "./pages/LandingPage";
 import SignUp from "./pages/SignUp";
-import Header from "./components/Header/index";
-import Footer from "./components/Footer";
+import App from "./App";
+import Dashboard from "./pages/Dashboard";
+import ErrorPage from "./pages/ErrorPage";
+import SignIn from "./pages/SignIn";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PasswordRecovery from "./pages/PasswordRecovery";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <LandingPage />,
-  },
-  {
-    path: "sign-up",
-    element: <SignUp />,
-  },
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <LandingPage />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "sign-in",
+        element: <SignIn />,
+      },
+      {
+        path: "sign-up",
+        element: <SignUp />,
+      },
+      {
+        path: "terms-and-conditions",
+        element: <TermsAndConditions />,
+      },
+      {
+        path: "privacy-policy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "password-recovery",
+        element: <PasswordRecovery />
+      }
+    ]
+  }
 ]);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
+
 root.render(
   <React.StrictMode>
-    <Header />
     <RouterProvider router={router} />
-    <Footer />
   </React.StrictMode>,
 );
 
